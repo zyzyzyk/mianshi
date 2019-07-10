@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = {
+          user: '蜗牛',
+          fn: function(n, m, f) {
+            console.log(this.user);
+            console.log(n+m+f)
+          }
+        }
+        var b = a.fn
+        var c = b.bind(a,5)
+        c(3,4)
+        // b.call(a)
+        // b()
+        // a.fn()
+      </script>
+</body>
+</html>
