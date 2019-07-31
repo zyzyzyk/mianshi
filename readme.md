@@ -75,3 +75,12 @@
    __proto__是每一个实例都有的属性，可以访问[prototype]属性，实例的__proto__与其构造函数的prototype指向的是同一个对象
    1. typeOf()
    2. instanceof() new出来的实例的__proto__ 与 构造函数的prototype指向同一个对象 
+
+## q9 
+   1. 输入url到页面加载完成的实现过程
+   2. Object.defineProperty(对象, 属性, {
+     get() {},
+     set(new) {
+
+     }
+   }) 增加或修改选中的对象属性 实现双向数据绑定
