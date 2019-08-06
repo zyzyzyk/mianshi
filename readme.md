@@ -124,4 +124,22 @@
     即cookie在浏览器和服务器之间来回传递，而sessionStorage，localStorage不会自动把数据发给服务器，仅在本地保存。
     cookie还有路径(path)的概念，可以限制cookie只属于某个路径下，存储大小只有4k左右
    sessionStorage：仅在当前浏览器窗口关闭前有效，不能长久保存
-   localStorage：在所有的同源窗口都是共享的，cookie也是如此，localStorage的大小在5M左右   
+   localStorage：在所有的同源窗口都是共享的，cookie也是如此，localStorage的大小在5M左右.
+
+## q19 任务列表 (event loop)
+   marcotask(宏观任务)：
+        setTimeout
+        setInterval
+        requestAnimationFrame
+        HTML解析
+        js的主线程
+        页面加载
+        用户交互
+   mircotask(微观任务)：
+        promise
+        mutation.oberver
+        process.nextTick
+
+   script(主程序代码) ---> process.nextTick ---> promise ---> setTimeout 
+   ---> setInterval ---> setImmediate ---> I/O ---> UI rendeing
+   
