@@ -143,3 +143,15 @@
    script(主程序代码) ---> process.nextTick ---> promise ---> setTimeout 
    ---> setInterval ---> setImmediate ---> I/O ---> UI rendeing
    
+## q21 浏览器的重绘与回流
+   浏览器渲染页面的过程
+       1. 解析HTML，生成DOM树
+       2. 解析CSS，生成CSSOM树
+       3. 将DOM树和CSSOM树结合生成render树
+       4. 回流: 根据生成的render树，进行回流，得到节点的几何信息
+       5. 重绘: 根据render树和回流得到的信息，得到节点的绝对像素
+       6. 将像素发给GPU 展示在页面上。
+
+## q22 vue子组件能否修改接收到的props里面的值
+   不能
+   未来保证数据的单向流动，便于数据的追踪，避免数据混乱。
